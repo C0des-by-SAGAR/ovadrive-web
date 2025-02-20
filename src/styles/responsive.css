@@ -1,0 +1,55 @@
+/* Base styles (mobile-first) */
+:root {
+  --container-padding: 1rem;
+  --header-height: 60px;
+  --font-size-base: 16px;
+  --voice-button-size: 60px;
+}
+
+/* Extra small devices (phones, 320px and up) */
+@media screen and (min-width: 320px) {
+  :root {
+    --container-padding: 1rem;
+    --voice-button-size: 70px;
+  }
+}
+
+/* Small devices (large phones, 480px and up) */
+@media screen and (min-width: 480px) {
+  :root {
+    --container-padding: 1.5rem;
+    --voice-button-size: 80px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+    --header-height: 70px;
+    --voice-button-size: 100px;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+  :root {
+    --container-padding: 2.5rem;
+    --header-height: 80px;
+  }
+}
+
+/* Extra large devices (large desktops, 1280px and up) */
+@media screen and (min-width: 1280px) {
+  :root {
+    --container-padding: 3rem;
+  }
+}
+
+/* XXL devices (1920px and up) */
+@media screen and (min-width: 1920px) {
+  :root {
+    --container-padding: 4rem;
+    --font-size-base: 18px;
+  }
+} 

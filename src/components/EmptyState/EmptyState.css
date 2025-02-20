@@ -1,0 +1,202 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: auto;
+  padding: 4rem, 2rem;
+  text-align: center;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  background: rgba(26, 26, 26, 0.3);
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.2);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  background-image: 
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.02) 25%,
+      transparent 25%
+    );
+}
+
+/* Container for EmptyState */
+.empty-state-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -64.5%);
+  width: 100%;
+  pointer-events: none;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  background: rgba(26, 26, 26, 0.3);
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+  pointer-events: auto;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.info-circle {
+  width: 32px;
+  height: 32px;
+  background: rgba(147, 51, 234, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  content: '情';
+}
+
+.info-icon {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.empty-message {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.chat-section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-preview {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.chat-date {
+  background: rgba(147, 51, 234, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.chat-message {
+  background: rgba(147, 51, 234, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-time {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.message-text {
+  margin: 0;
+  color: white;
+}
+
+/* Animation for the empty state */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.info-circle:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Glass morphism effect */
+.empty-state::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* Updated responsive adjustments */
+@media (max-width: 768px) {
+  .empty-state {
+    width: 320px;
+    padding: 20px;
+  }
+  
+  .empty-message {
+    font-size: 14px;
+  }
+
+  .info-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .empty-state {
+    width: 240px;
+    padding: 15px;
+  }
+  
+  .empty-message {
+    font-size: 13px;
+  }
+} 

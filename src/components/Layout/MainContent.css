@@ -1,0 +1,102 @@
+.main-content {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: #000000;
+  color: white;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 300px);
+  text-align: center;
+}
+
+.info-circle {
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.info-circle i {
+  color: #000;
+  font-size: 2rem;
+}
+
+.empty-message {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input-container,
+.search-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.message-input,
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-input input,
+.search-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.message-input input::placeholder,
+.search-input input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.send-btn,
+.search-btn {
+  background: #9333EA;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover,
+.search-btn:hover {
+  background: #7928CA;
+} 

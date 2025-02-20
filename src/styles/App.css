@@ -1,0 +1,155 @@
+/* Import responsive variables */
+@import './responsive.css';
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling on body */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* App layout */
+.app {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: transparent; /* Changed from any existing background */
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent app from scrolling */
+}
+
+.app.sidebar-open {
+  margin-left: 300px;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2; /* Ensure main content is above background */
+  flex: 1;
+  overflow: hidden; /* Prevent content scrolling */
+  display: flex;
+  flex-direction: column;
+  background: transparent; /* Changed from any existing background */
+}
+
+/* Layout containers */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Voice Assistant styles */
+.voice-assistant {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+  position: relative;
+}
+
+.voice-button {
+  width: var(--voice-button-size);
+  height: var(--voice-button-size);
+  background: #4CAF50;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.voice-button.listening {
+  background: #f44336;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.transcript-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive grid system */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive typography */
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .text-xl {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-xl {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive spacing utilities */
+.spacing-responsive {
+  padding: var(--container-padding);
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

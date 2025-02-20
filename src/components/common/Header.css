@@ -1,0 +1,174 @@
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  background: transparent;
+  z-index: 10;
+  height: auto;
+  min-height: 60px;
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-tabs {
+  display: flex;
+  align-items: center;
+  background: rgba(26, 26, 26, 0.4);
+  border-radius: 16px;
+  padding: 4px;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 48px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: 'TechnoSphere', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.tab.active {
+  background: #9333EA;
+}
+
+.tab span {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.tab:not(.active):hover {
+  background: rgba(147, 51, 234, 0.3);
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  margin-right: -2px;
+}
+
+.ova-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ova-text {
+  font-family: 'TechnoSphere', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  margin-left: -1px;
+}
+
+.refresh-btn,
+.history-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.history-btn {
+  position: absolute;
+  left: 16px;
+}
+
+.refresh-btn {
+  position: absolute;
+  right: 0;
+  background: rgba(147, 51, 234, 0.2);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.refresh-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.history-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.history-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.button-label {
+  font-size: 14px;
+  color: white;
+  padding-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 0;
+    width: calc(100% - 24px);
+  }
+
+  .section-tabs {
+    max-width: calc(100% - 96px);
+    margin: 0 auto;
+  }
+
+  .tab {
+    padding: 8px 16px;
+    min-width: 80px;
+    font-size: 1rem;
+  }
+
+  .history-btn,
+  .refresh-btn {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .button-label {
+    display: none;
+  }
+
+  .refresh-btn {
+    right: 0;
+  }
+} 
